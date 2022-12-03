@@ -1,5 +1,5 @@
 import random
-from SolverSudokuM12 import Sudoku, Solver
+from SolverSudoku import Sudoku, Solver
 
 
 class GeneratorPole:
