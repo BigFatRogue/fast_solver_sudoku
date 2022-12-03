@@ -1,17 +1,10 @@
-"""
-Реализация через 3 метода, но 1 и 2 метод объединены.
-Быстрее чем методы по раздельности
-"""
-
-from version_1.PoleSudoku import Sudoku
+from PoleSudoku import Sudoku
 from SaveGetTxt import *
 from Timer import timer
 import random
 
 
 class Solver:
-    # __slots__ = 'lst', 'lst_solvers', 'buffer', 'min_var'
-
     def __init__(self, lst: list):
         self.lst = Sudoku(lst)
 
@@ -184,22 +177,10 @@ class Solver:
 
 if __name__ == '__main__':
     sud, sol = get_sudoku(20, 1)
-    # sud = [[4, 7, 3, 0, 2, 0, 0, 0, 0],
-    #        [5, 0, 0, 8, 0, 0, 9, 3, 0],
-    #        [8, 1, 9, 0, 0, 0, 0, 7, 0],
-    #        [0, 0, 6, 0, 0, 0, 0, 2, 0],
-    #        [0, 0, 0, 0, 0, 4, 0, 0, 0],
-    #        [0, 0, 0, 0, 1, 0, 0, 0, 8],
-    #        [6, 0, 0, 0, 0, 5, 0, 0, 9],
-    #        [0, 3, 0, 7, 0, 0, 0, 0, 0],
-    #        [1, 5, 8, 2, 0, 3, 0, 0, 4]]
-    # print(str(sud).replace('[', '{'). replace(']', '}'))
-    # for row in sud:
-    #     print(str(row).replace('[', '{'). replace(']', '},'))
-
+    
     solver = Solver(sud)
-    # solver.run()
+    solver.run()
     # solver.run_random()
-    solver.run_all_variant()
+    # solver.run_all_variant()
 
 
