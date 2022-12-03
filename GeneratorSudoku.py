@@ -1,12 +1,9 @@
 from GeneratorPole import GeneratorPole
-from SolverSudokuM12 import Solver
-# from SolverSudokuM123 import Solver
+from SolverSudoku import Solver
 import random
 import time
 
 from Timer import timer
-from SaveGetTxt import *
-from WinBall import WindowsBalloonTip
 
 
 class GeneratorSudoku(Solver):
@@ -91,8 +88,6 @@ class GeneratorSudoku(Solver):
 
 
 if __name__ == '__main__':
-    win_info = WindowsBalloonTip()
-
     # Генерация поля
     pole = GeneratorPole().run().lst
 
@@ -100,10 +95,7 @@ if __name__ == '__main__':
     gen = GeneratorSudoku(pole, quality=25)
     res = gen.create_sudoku()
 
-    # Сохранение головоломки
-    save_sudoku(res, pole)
 
-    win_info.create_window('Генератор судоку', 'Готово')
 
 
 
