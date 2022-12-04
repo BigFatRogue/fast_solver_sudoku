@@ -1,4 +1,4 @@
-# solver_sudoku
+# Алгоритм быстрого решения Судоку
 Algorithm to create Sudoku grid and solve Sudoku
 
 1. Файл PoleSudoku.py содержит класс Sudoku, для работы с двумерными списками для обработки игровых полей Судоку
